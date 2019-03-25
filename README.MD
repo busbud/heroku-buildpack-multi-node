@@ -5,7 +5,8 @@ If you want to go the google route and have a mono repo for all your Node.js app
 It:
 
 1. Looks at `APP_SUBFOLDER` in your env.
-2. Copies `root/${APP_SUBFOLDER}/Procfile` to `root/Procfile`
-3. Copies `root/${APP_SUBFOLDER}/package.json` to `root/package.json`
+1. Copies `root/${APP_SUBFOLDER}/Procfile` to `root/Procfile`
+1. Copies `root/${APP_SUBFOLDER}/package.json` to `root/package.json`
+1. If present, copies `root/${APP_SUBFOLDER}/yarn.lock` to `root/yarn.lock`
 
 And that's it! Super simple!
