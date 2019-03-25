@@ -29,4 +29,13 @@ if ! [ $? ]; then
     exit 1
 fi
 
+if [ -f "${BUILD_DIR}/${APP_SUBFOLDER}/yarn.lock" ]; then
+    cp ${BUILD_DIR}/${APP_SUBFOLDER}/yarn.lock ${BUILD_DIR}/yarn.lock
+
+    if ! [ $? ]; then
+        echo "FAILED to copy yarn.lock" | indent
+        exit 1
+    fi
+fi
+
 echo "Copied Procfile and package.json from ${APP_SUBFOLDER} successfully" | indent
